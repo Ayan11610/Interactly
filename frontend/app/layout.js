@@ -1,11 +1,15 @@
 // File: frontend/app/layout.js
 // Purpose: Root layout for every page. Loads the design tokens, global styles and fonts,
-//          and wraps every page in AuthProvider so pages know who is logged in.
+//          wraps every page in AuthProvider so pages know who is logged in, and shows the
+//          loading splash (ST-01) while the site first opens and the brush-stroke swipe
+//          on every page change.
 // Screens: all (app shell root)
 
 import "@/styles/tokens.css";
 import "@/styles/globals.css";
 import { AuthProvider } from "@/context/AuthContext";
+import SplashScreen from "@/components/SplashScreen/SplashScreen";
+import PageSwipe from "@/components/PageSwipe/PageSwipe";
 
 // Google Fonts used by the Interactly design system (see docs/design/system/README.md)
 const fontsUrl =
@@ -21,10 +25,11 @@ export const metadata = {
   description: "A real-time interactive presentation and audience engagement platform",
 };
 
-// Wraps every page in the html and body tags and adds the font links
+// Wraps every page in the html and body tags and adds the font links.
+// suppressHydrationWarning: the splash script adds data-app-ready to <html> before React starts.
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -32,6 +37,8 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <AuthProvider>{children}</AuthProvider>
+        <PageSwipe />
+        <SplashScreen />
       </body>
     </html>
   );

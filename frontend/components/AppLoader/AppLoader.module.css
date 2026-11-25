@@ -1,0 +1,125 @@
+/*
+  File: frontend/components/AppLoader/AppLoader.module.css
+  Purpose: Styles and drawing animation of the loading screen.
+  Source: docs/design/screens/ST-01.html, docs/design/system/motion.md (draw, fade, wiggle)
+*/
+
+.page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: var(--bg-page);
+  color: var(--text-primary);
+}
+
+.main {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  text-align: center;
+}
+
+/* Doodle positions */
+.spiral {
+  top: -60px;
+  right: -60px;
+}
+
+.star {
+  bottom: 120px;
+  left: 18%;
+}
+
+.star path:first-child {
+  fill: var(--lemon-400);
+}
+
+.dot {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+}
+
+/* Mascot */
+.mascot {
+  overflow: visible;
+}
+
+.face {
+  fill: var(--action-primary);
+  animation: fade 400ms 900ms both;
+}
+
+.line {
+  fill: none;
+  stroke: var(--text-primary);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Each line draws, then undraws, forever, slightly after the one before */
+.draw {
+  stroke-dasharray: 400;
+  animation: draw 1200ms ease-in-out infinite alternate;
+}
+
+.second {
+  animation-delay: 200ms;
+}
+
+.third {
+  animation-delay: 400ms;
+}
+
+.eye {
+  fill: var(--text-on-light);
+}
+
+.leftEye {
+  animation: fade 300ms 700ms both;
+}
+
+.rightEye {
+  animation: fade 300ms 800ms both;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--fs-projector-title);
+}
+
+.message {
+  color: var(--text-secondary);
+  font-size: var(--fs-body-lg);
+  animation: fade 600ms 300ms both;
+}
+
+.screenCode {
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono-xs);
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 400;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

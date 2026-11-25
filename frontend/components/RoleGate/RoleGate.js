@@ -12,6 +12,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { homePathForRole } from "@/services/authService";
 import AccessDenied from "@/components/AccessDenied/AccessDenied";
 import Alert from "@/components/Alert/Alert";
+import AppLoader from "@/components/AppLoader/AppLoader";
 
 // allowedRoles e.g. ["instructor"]; loginPath is where logged-out visitors go
 export default function RoleGate({ allowedRoles, loginPath = "/login", children }) {
@@ -25,8 +26,9 @@ export default function RoleGate({ allowedRoles, loginPath = "/login", children 
     }
   }, [loading, session, loginPath, router]);
 
+  // Shows the loading screen (ST-01) while we find out who is logged in
   if (loading || !session) {
-    return null;
+    return <AppLoader />;
   }
   if (profileError) {
     return <Alert tone="error" title="Couldn't load your account">{profileError}</Alert>;

@@ -1,0 +1,23 @@
+/*
+  File: frontend/components/SplashScreen/SplashScreen.module.css
+  Purpose: Puts the first-load splash on top of the page and fades it out when ready.
+  Source: docs/design/screens/ST-01.html, docs/design/system/motion.md (fade)
+*/
+
+.splash {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-transition);
+  overflow: auto;
+  background: var(--bg-page);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 300ms ease, visibility 300ms ease;
+}
+
+/* <html data-app-ready> is set by the small script in SplashScreen.js */
+:global(html[data-app-ready]) .splash {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
