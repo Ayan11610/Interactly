@@ -60,7 +60,7 @@
   color: var(--neutral-50);
 }
 
-/* Keep the light colour on hover (the global a:hover ink colour would vanish here) */
+/* Links stay light on hover, as in PUB-01 (overrides the global ink a:hover colour) */
 .link:hover {
   color: var(--neutral-50);
 }
