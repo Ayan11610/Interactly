@@ -1,0 +1,123 @@
+/*
+  File: frontend/app/(public)/features/_features/ProjectorPreview.module.css
+  Purpose: Styles for the dark projector screen picture.
+  Source: docs/design/screens/PUB-03.html ("PROJECTOR" section)
+*/
+
+.screen {
+  flex: 1 1 460px;
+  min-width: 0;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-14);
+  padding: clamp(16px, 3vw, 32px);
+  border: var(--bw-default) solid var(--border-strong);
+  border-radius: var(--radius-md);
+  background: var(--neutral-950);
+  box-shadow: var(--shadow-md);
+  color: var(--neutral-50);
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-on-ink-muted);
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono-md);
+}
+
+.code {
+  padding: var(--space-2) var(--space-8);
+  border-radius: var(--radius-sm);
+  background: var(--action-primary);
+  color: var(--text-on-light);
+}
+
+.question {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(18px, 2vw, 28px);
+}
+
+.chart {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.plot {
+  height: 130px;
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-8);
+  border-bottom: var(--bw-default) solid var(--border-on-ink);
+}
+
+.column {
+  flex: 1 1 0;
+  min-width: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-6);
+}
+
+.votes,
+.letter {
+  color: var(--neutral-50);
+  font-family: var(--font-mono);
+}
+
+.votes {
+  font-size: var(--fs-mono-sm);
+}
+
+.bar {
+  width: 70%;
+  max-width: 64px;
+  border: var(--bw-default) solid var(--neutral-950);
+  border-bottom: none;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  transform-origin: bottom;
+  animation: growY 600ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.colourA {
+  background: var(--answer-a);
+}
+
+.colourB {
+  background: var(--answer-b);
+}
+
+.colourC {
+  background: var(--answer-c);
+}
+
+.colourD {
+  background: var(--answer-d);
+}
+
+.letters {
+  display: flex;
+  gap: var(--space-8);
+}
+
+.letter {
+  flex: 1 1 0;
+  min-width: 0;
+  text-align: center;
+  font-size: var(--fs-mono-xs);
+}
+
+@keyframes growY {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}

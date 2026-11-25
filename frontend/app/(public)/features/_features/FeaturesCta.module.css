@@ -1,0 +1,31 @@
+/*
+  File: frontend/app/(public)/features/_features/FeaturesCta.module.css
+  Purpose: Styles for the Features page closing row.
+  Source: docs/design/screens/PUB-03.html (last section)
+*/
+
+.section {
+  padding: clamp(48px, 6vw, 96px) 0;
+  border-top: var(--bw-default) solid var(--border-strong);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-24);
+}
+
+.title {
+  max-width: 760px;
+  margin: 0;
+  font-size: clamp(1.75rem, 1.3rem + 2vw, 3rem);
+  line-height: 1.1;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-14);
+}

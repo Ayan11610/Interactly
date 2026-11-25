@@ -1,6 +1,7 @@
 // File: frontend/components/Icon/iconPaths.js
 // Purpose: SVG path data for every icon in the design system (24px grid, 2px round stroke).
-// Source: docs/design/system/components.js (PATHS). "menu" is copied from PUB-01.
+// Source: docs/design/system/components.js (PATHS). "menu" is copied from PUB-01,
+//         "qr-code" from PUB-03.
 // Screens: all
 
 const iconPaths = {
@@ -49,6 +50,7 @@ const iconPaths = {
   "shape-square": "M4 4 H20 V20 H4 Z",
   "shape-star": "M12 2.5 L14.8 8.9 L21.6 9.4 L16.4 13.8 L18 20.5 L12 16.9 L6 20.5 L7.6 13.8 L2.4 9.4 L9.2 8.9 Z",
   "menu": "M4 7 H20 M4 12 H20 M4 17 H20",
+  "qr-code": "M4 4 H10 V10 H4 Z M14 4 H20 V10 H14 Z M4 14 H10 V20 H4 Z M14 14 H16 V16 H14 Z M18 18 H20 V20 H18 Z M18 14 H20 M14 20 H16",
 };
 
 export default iconPaths;

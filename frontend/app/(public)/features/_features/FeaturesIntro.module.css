@@ -1,0 +1,55 @@
+/*
+  File: frontend/app/(public)/features/_features/FeaturesIntro.module.css
+  Purpose: Styles for the Features page intro.
+  Source: docs/design/screens/PUB-03.html (first section)
+*/
+
+.intro {
+  position: relative;
+  padding: clamp(40px, 6vw, 88px) 0 clamp(32px, 4vw, 64px);
+}
+
+/* Where the doodles sit */
+.spiral {
+  top: -60px;
+  right: -80px;
+}
+
+.bolt {
+  bottom: 30px;
+  left: 6%;
+}
+
+.inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-18);
+}
+
+.screenCode {
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono-xs);
+}
+
+/* Fluid size from the design: 36px on phones up to 72px on desktop */
+.title {
+  max-width: 900px;
+  margin: 0;
+  font-size: clamp(2.25rem, 1.5rem + 3vw, 4.5rem);
+  line-height: 1.05;
+}
+
+.lead {
+  max-width: 640px;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-14);
+}

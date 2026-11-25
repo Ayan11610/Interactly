@@ -48,11 +48,11 @@ export function StarDoodle({ size = 56, className }) {
   );
 }
 
-// Lime lightning bolt. className sets where it sits on the page.
-export function BoltDoodle({ className }) {
+// Lime lightning bolt. width sets its size (height follows); className sets where it sits.
+export function BoltDoodle({ width = 44, className }) {
   const boltPath = "M18 3 L5 25 H15 L11 43 L26 18 H16 Z";
   return (
-    <svg width="44" height="66" viewBox="0 0 30 46" className={joinClasses(styles.bolt, className)} aria-hidden="true">
+    <svg width={width} height={width * 1.5} viewBox="0 0 30 46" className={joinClasses(styles.bolt, className)} aria-hidden="true">
       <path className={styles.boltFill} d={boltPath} transform="translate(2 2)" />
       <path className={styles.boltStroke} d={boltPath} />
     </svg>

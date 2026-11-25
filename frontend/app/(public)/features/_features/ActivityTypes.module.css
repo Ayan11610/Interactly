@@ -1,0 +1,77 @@
+/*
+  File: frontend/app/(public)/features/_features/ActivityTypes.module.css
+  Purpose: Styles for the activity type groups.
+  Source: docs/design/screens/PUB-03.html ("24 ACTIVITY TYPES" section)
+*/
+
+.section {
+  padding: clamp(48px, 6vw, 96px) 0;
+  border-top: var(--bw-default) solid var(--border-strong);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-28);
+}
+
+.groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-20);
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-14);
+  padding: 22px;
+  border: var(--bw-default) solid var(--border-strong);
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+}
+
+.groupHead {
+  display: flex;
+  align-items: center;
+  gap: var(--space-10);
+}
+
+.swatch {
+  width: 18px;
+  height: 18px;
+  border: var(--bw-default) solid var(--border-strong);
+  border-radius: var(--radius-sm);
+}
+
+.peach {
+  background: var(--peach-400);
+}
+
+.lemon {
+  background: var(--lemon-400);
+}
+
+.mint {
+  background: var(--mint-400);
+}
+
+.groupTitle {
+  margin: 0;
+  font-size: var(--fs-heading);
+  line-height: 1.2;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+}
+
+.handNote {
+  align-self: flex-start;
+  margin: 0;
+  font-family: var(--font-hand);
+  font-size: var(--fs-hand-sm);
+  transform: rotate(-2deg);
+}

@@ -1,0 +1,64 @@
+/*
+  File: frontend/app/(public)/features/_features/AiInsightsSection.module.css
+  Purpose: Styles for the AI insights section.
+  Source: docs/design/screens/PUB-03.html ("AI INSIGHTS" section)
+*/
+
+.section {
+  padding: clamp(48px, 6vw, 96px) 0;
+  border-top: var(--bw-default) solid var(--border-strong);
+  background: var(--bg-tint);
+}
+
+.inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-40);
+}
+
+.text,
+.cards {
+  flex: 1 1 360px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-14);
+}
+
+.lead {
+  max-width: 540px;
+  margin: 0;
+  font-size: var(--fs-body-lg);
+  line-height: 1.6;
+}
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-12);
+  padding: var(--space-16);
+  border: var(--bw-default) solid var(--border-strong);
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+  box-shadow: var(--shadow-sm);
+  color: var(--text-primary);
+}
+
+.highlight {
+  background: var(--action-primary);
+}
+
+.cardText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.cardTitle {
+  font-size: var(--fs-body);
+}
+
+.example {
+  font-size: var(--fs-body-sm);
+  line-height: 1.5;
+}

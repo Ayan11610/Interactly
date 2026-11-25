@@ -1,0 +1,87 @@
+/*
+  File: frontend/app/(public)/features/_features/FeatureGrid.module.css
+  Purpose: Styles for the six feature cards.
+  Source: docs/design/screens/PUB-03.html (second section)
+*/
+
+.section {
+  padding: clamp(48px, 6vw, 96px) 0;
+  border-top: var(--bw-default) solid var(--border-strong);
+  background: var(--bg-surface);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-20);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  padding: var(--space-24);
+  border: var(--bw-default) solid var(--border-strong);
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+  animation: stagger 400ms both;
+}
+
+.iconBox {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--bw-default) solid var(--border-strong);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+}
+
+/* Icon box tints */
+.mint {
+  background: var(--tint-mint);
+}
+
+.lemon {
+  background: var(--bg-tint);
+}
+
+.peach {
+  background: var(--tint-peach);
+}
+
+.paleMint {
+  background: var(--mint-50);
+}
+
+.sunken {
+  background: var(--bg-sunken);
+}
+
+.lime {
+  background: var(--tint-lime);
+}
+
+.title {
+  margin: 0;
+  font-size: var(--fs-heading);
+  line-height: 1.2;
+}
+
+.text {
+  margin: 0;
+  font-size: var(--fs-body);
+  line-height: 1.6;
+}
+
+@keyframes stagger {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
