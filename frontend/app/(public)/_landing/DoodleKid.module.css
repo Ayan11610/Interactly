@@ -1,0 +1,58 @@
+/*
+  File: frontend/app/(public)/_landing/DoodleKid.module.css
+  Purpose: Colours and hop animation of the doodle student faces.
+  Source: docs/design/screens/PUB-01.html (faces under the demo poll)
+*/
+
+.kid {
+  margin-left: -6px;
+}
+
+.hop {
+  animation: hop 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.lemon,
+.peach,
+.mint,
+.lime {
+  stroke: var(--border-strong);
+  stroke-width: 2;
+}
+
+.lemon {
+  fill: var(--lemon-400);
+}
+
+.peach {
+  fill: var(--peach-400);
+}
+
+.mint {
+  fill: var(--mint-400);
+}
+
+.lime {
+  fill: var(--lime-400);
+}
+
+.eye {
+  fill: var(--text-on-light);
+}
+
+.mouth {
+  fill: none;
+  stroke: var(--text-on-light);
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+@keyframes hop {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+}

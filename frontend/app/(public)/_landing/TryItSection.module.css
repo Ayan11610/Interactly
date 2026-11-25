@@ -1,0 +1,86 @@
+/*
+  File: frontend/app/(public)/_landing/TryItSection.module.css
+  Purpose: Styles for the "Try it here" section, its tabs and the demo panel.
+  Source: docs/design/screens/PUB-01.html (section "play-h")
+*/
+
+.section {
+  position: relative;
+  padding: clamp(56px, 7vw, 112px) 0;
+  border-top: var(--bw-default) solid var(--border-strong);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-28);
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-10);
+}
+
+.tab {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  height: 44px;
+  padding: 0 var(--space-16);
+  border: var(--bw-default) solid var(--border-strong);
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-weight: 600;
+  font-size: var(--fs-nav);
+  cursor: pointer;
+  transition: transform 150ms cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 150ms;
+}
+
+.tab:active {
+  transform: translate(3px, 3px);
+  box-shadow: var(--shadow-none);
+}
+
+.selected {
+  background: var(--bg-tint);
+  box-shadow: var(--shadow-sm);
+}
+
+.swatch {
+  width: 14px;
+  height: 14px;
+  border: var(--bw-default) solid var(--border-strong);
+  border-radius: var(--radius-xs);
+}
+
+.swatchQuiz {
+  background: var(--activity-quiz);
+}
+
+.swatchPoll {
+  background: var(--activity-poll);
+}
+
+.swatchCloud {
+  background: var(--activity-wordcloud);
+}
+
+.swatchQa {
+  background: var(--activity-qa);
+}
+
+.swatchRating {
+  background: var(--activity-rating);
+}
+
+.panel {
+  min-height: 280px;
+  padding: clamp(18px, 3vw, 32px);
+  border: var(--bw-default) solid var(--border-strong);
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+  box-shadow: var(--shadow-md);
+}

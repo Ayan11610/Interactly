@@ -1,0 +1,69 @@
+/*
+  File: frontend/app/(public)/_landing/Doodles.module.css
+  Purpose: Position, colour and wiggle animation of the landing page doodles.
+  Source: docs/design/screens/PUB-01.html (hero and "Try it here" doodles)
+*/
+
+.filterHolder {
+  position: absolute;
+}
+
+/* Shared hand-drawn stroke (".dd" in the design) */
+.stroke,
+.starStroke,
+.boltStroke {
+  fill: none;
+  stroke: var(--text-primary);
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.spiral {
+  position: absolute;
+  top: -70px;
+  right: -80px;
+  filter: url(#rough);
+  animation: wiggle 3s ease-in-out infinite;
+}
+
+.star {
+  position: absolute;
+  bottom: var(--space-40);
+  left: 3%;
+  filter: url(#rough);
+  animation: wiggle 3.4s ease-in-out infinite;
+}
+
+.starFill {
+  fill: var(--peach-400);
+}
+
+.starStroke {
+  stroke-width: 3.6;
+}
+
+.bolt {
+  position: absolute;
+  top: 60px;
+  right: 8%;
+  filter: url(#rough);
+}
+
+.boltFill {
+  fill: var(--lime-400);
+}
+
+.boltStroke {
+  stroke-width: 2;
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+}

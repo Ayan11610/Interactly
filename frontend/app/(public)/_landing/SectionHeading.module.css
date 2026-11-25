@@ -1,0 +1,24 @@
+/*
+  File: frontend/app/(public)/_landing/SectionHeading.module.css
+  Purpose: Styles for the landing page section eyebrow and title.
+  Source: docs/design/screens/PUB-01.html (section headings)
+*/
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+  max-width: 640px;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono-sm);
+}
+
+/* Fluid size from the design: 28px on phones up to 48px on desktop */
+.title {
+  margin: 0;
+  font-size: clamp(1.75rem, 1.3rem + 2vw, 3rem);
+  line-height: 1.1;
+}

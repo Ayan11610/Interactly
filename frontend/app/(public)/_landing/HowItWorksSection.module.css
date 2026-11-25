@@ -1,0 +1,82 @@
+/*
+  File: frontend/app/(public)/_landing/HowItWorksSection.module.css
+  Purpose: Styles for the "How it works" section.
+  Source: docs/design/screens/PUB-01.html (section#how)
+*/
+
+.section {
+  position: relative;
+  padding: clamp(56px, 7vw, 112px) 0;
+  border-top: var(--bw-default) solid var(--border-strong);
+  background: var(--bg-surface);
+}
+
+.inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-48);
+}
+
+/* Dashed arrow running across the three steps */
+.arrow {
+  width: 100%;
+  height: 50px;
+  margin-bottom: -40px;
+}
+
+.dashed {
+  fill: none;
+  stroke: var(--text-primary);
+  stroke-width: 2.4;
+  stroke-dasharray: 10 10;
+  stroke-linecap: round;
+}
+
+.arrowHead {
+  fill: none;
+  stroke: var(--text-primary);
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-24);
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-14);
+  animation: floatIn 500ms both;
+}
+
+.number {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono-sm);
+}
+
+.stepTitle {
+  margin: 0;
+  font-size: var(--fs-card-title);
+}
+
+.stepText {
+  margin: 0;
+  font-size: var(--fs-body);
+  line-height: 1.6;
+}
+
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

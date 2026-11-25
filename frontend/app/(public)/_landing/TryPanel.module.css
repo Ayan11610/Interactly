@@ -1,0 +1,45 @@
+/*
+  File: frontend/app/(public)/_landing/TryPanel.module.css
+  Purpose: Shared layout for every "Try it here" demo (column, question title, hand-written note).
+  Source: docs/design/screens/PUB-01.html (Try it here tab panels)
+*/
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  animation: floatIn 300ms both;
+}
+
+.question {
+  margin: 0;
+  font-size: 24px;
+}
+
+.note {
+  min-height: 28px;
+  font-family: var(--font-hand);
+  font-size: var(--fs-hand-sm);
+}
+
+/* Press effect shared by the small demo buttons */
+.pressable {
+  cursor: pointer;
+  transition: transform 150ms cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 150ms;
+}
+
+.pressable:active {
+  transform: translate(3px, 3px);
+  box-shadow: var(--shadow-none);
+}
+
+@keyframes floatIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
