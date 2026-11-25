@@ -1,0 +1,24 @@
+/*
+  File: frontend/app/(auth)/_auth/StrengthMeter.module.css
+  Purpose: Styles for the password strength bars.
+  Source: docs/design/screens/IAM-06.dc.html ("Password strength 4 of 4")
+*/
+
+.meter {
+  display: flex;
+  gap: var(--space-6);
+  margin-top: -6px;
+}
+
+.bar {
+  flex: 1;
+  height: 8px;
+  border: var(--bw-default) solid var(--border-strong);
+  border-radius: var(--radius-xs);
+  background: var(--bg-surface);
+  transition: background 200ms;
+}
+
+.on {
+  background: var(--mint-400);
+}

@@ -1,0 +1,59 @@
+/*
+  File: frontend/components/Checkbox/Checkbox.module.css
+  Purpose: Styles for the Checkbox component.
+  Source: docs/design/system/components.css (.ix-check)
+*/
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: var(--space-10);
+  min-height: 44px;
+  font-size: var(--fs-body);
+  cursor: pointer;
+}
+
+.box {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  flex: none;
+}
+
+/* The real input sits invisibly on top so clicks and keyboard still work */
+.input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--bw-default) solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface);
+  pointer-events: none;
+}
+
+.face svg {
+  visibility: hidden;
+}
+
+.input:checked + .face {
+  background: var(--action-primary);
+}
+
+.input:checked + .face svg {
+  visibility: visible;
+}
+
+.input:focus-visible + .face {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}

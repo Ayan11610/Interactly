@@ -1,0 +1,28 @@
+/*
+  File: frontend/app/(auth)/_auth/AuthHeading.module.css
+  Purpose: Styles for the auth title and sentence.
+  Source: docs/design/screens/IAM-01.html and IAM-03.html
+*/
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.title {
+  margin: 0;
+  font-size: var(--fs-section-title);
+  line-height: 1.2;
+}
+
+.phoneTitle {
+  font-size: 30px;
+}
+
+.text {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+}

@@ -1,0 +1,140 @@
+/*
+  File: frontend/app/(auth)/_auth/AuthSplitLayout.module.css
+  Purpose: Styles for the desktop auth layout and its side panel.
+  Source: docs/design/screens/IAM-01.html
+*/
+
+.page {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  background: var(--bg-page);
+  animation: pageIn 400ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.panel {
+  position: relative;
+  flex: 1 1 420px;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-40);
+  padding: var(--space-40) var(--space-48);
+  overflow: hidden;
+  border-right: var(--bw-default) solid var(--border-strong);
+  background: var(--bg-tint);
+}
+
+/* Keeps the panel content above the doodles */
+.raised,
+.pitch {
+  position: relative;
+}
+
+.pitch {
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.headline {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.5rem, 1.6rem + 2vw, 3.5rem);
+  line-height: 1.08;
+}
+
+.body {
+  margin: 0;
+  font-size: var(--fs-body-lg);
+  line-height: 1.6;
+}
+
+.handNote {
+  align-self: flex-start;
+  margin: 0;
+  font-family: var(--font-hand);
+  font-size: 24px;
+  transform: rotate(-2deg);
+}
+
+.mascot {
+  overflow: visible;
+  animation: wiggle 3s ease-in-out infinite;
+}
+
+.line {
+  fill: none;
+  stroke: var(--text-primary);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.face {
+  fill: var(--action-primary);
+}
+
+.eye {
+  fill: var(--text-on-light);
+}
+
+.cheek {
+  fill: var(--peach-400);
+}
+
+.main {
+  flex: 1 1 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-48) var(--space-24);
+}
+
+.column {
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-18);
+}
+
+.screenCode {
+  align-self: flex-end;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono-xs);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-18);
+  padding: var(--space-32);
+}
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+}

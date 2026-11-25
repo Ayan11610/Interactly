@@ -1,9 +1,11 @@
 // File: frontend/app/layout.js
-// Purpose: Root layout for every page. Loads the design tokens, global styles and fonts.
+// Purpose: Root layout for every page. Loads the design tokens, global styles and fonts,
+//          and wraps every page in AuthProvider so pages know who is logged in.
 // Screens: all (app shell root)
 
 import "@/styles/tokens.css";
 import "@/styles/globals.css";
+import { AuthProvider } from "@/context/AuthContext";
 
 // Google Fonts used by the Interactly design system (see docs/design/system/README.md)
 const fontsUrl =
@@ -28,7 +30,9 @@ export default function RootLayout({ children }) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="stylesheet" href={fontsUrl} />
       </head>
-      <body>{children}</body>
+      <body>
+        <AuthProvider>{children}</AuthProvider>
+      </body>
     </html>
   );
 }

@@ -1,0 +1,30 @@
+/*
+  File: frontend/app/(auth)/_auth/AuthForm.module.css
+  Purpose: Shared form layout for the auth screens: field stack and the row of small links
+           under each form (Forgot password?, Create an account, ...).
+  Source: docs/design/screens/IAM-01.html (links row)
+*/
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-10) var(--space-16);
+}
+
+.link {
+  font-size: var(--fs-body-sm);
+  font-weight: 600;
+}
+
+/* Used by forms to stack their fields with the design gap */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-18);
+}
+
+.muted {
+  color: var(--text-secondary);
+  font-size: var(--fs-body-sm);
+}

@@ -1,0 +1,104 @@
+/*
+  File: frontend/components/AccessDenied/AccessDenied.module.css
+  Purpose: Styles for the Access Denied screen.
+  Source: docs/design/screens/IAM-18.html
+*/
+
+.page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: var(--bg-page);
+  color: var(--text-primary);
+}
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-24) var(--space-40);
+}
+
+.screenCode {
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono-xs);
+}
+
+.spiral {
+  top: 120px;
+  right: -80px;
+}
+
+.star {
+  bottom: 160px;
+  left: 120px;
+}
+
+.bolt {
+  top: 180px;
+  left: 18%;
+}
+
+.main {
+  position: relative;
+  min-height: calc(100vh - 92px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  padding: var(--space-24) var(--space-24) var(--space-80);
+  text-align: center;
+}
+
+.padlock {
+  overflow: visible;
+  filter: url(#rough);
+  animation: wiggle 3.2s ease-in-out infinite;
+}
+
+.lockFill {
+  fill: var(--action-primary);
+}
+
+.line {
+  fill: none;
+  stroke: var(--text-primary);
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.title {
+  max-width: 720px;
+  margin: 0;
+  font-size: clamp(1.75rem, 1.4rem + 1.5vw, 2.5rem);
+  line-height: 1.2;
+}
+
+.text {
+  max-width: 520px;
+  margin: 0;
+  font-size: var(--fs-body-lg);
+  line-height: 1.6;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-14);
+  margin-top: var(--space-8);
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+}

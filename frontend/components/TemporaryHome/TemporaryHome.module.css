@@ -1,0 +1,31 @@
+/*
+  File: frontend/components/TemporaryHome/TemporaryHome.module.css
+  Purpose: Styles for the temporary after-login page.
+  Source: design system Card and type tokens (no screen design: temporary page)
+*/
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-14);
+}
+
+.title {
+  margin: 0;
+  font-size: var(--fs-section-title);
+}
+
+.text {
+  margin: 0;
+  font-size: var(--fs-body);
+  line-height: 1.6;
+}

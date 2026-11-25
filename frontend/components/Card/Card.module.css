@@ -1,0 +1,17 @@
+/*
+  File: frontend/components/Card/Card.module.css
+  Purpose: Styles for the Card component.
+  Source: docs/design/system/components.css (.ix-card)
+*/
+
+.card {
+  min-width: 0;
+  padding: var(--space-24);
+  border: var(--bw-default) solid var(--border-strong);
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+}
+
+.raised {
+  box-shadow: var(--shadow-sm);
+}
