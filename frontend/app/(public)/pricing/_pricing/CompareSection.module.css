@@ -1,0 +1,17 @@
+/*
+  File: frontend/app/(public)/pricing/_pricing/CompareSection.module.css
+  Purpose: Styles for the plan comparison section.
+  Source: docs/design/screens/PUB-02.html ("COMPARE" section)
+*/
+
+.section {
+  padding: clamp(48px, 6vw, 96px) 0;
+  border-top: var(--bw-default) solid var(--border-strong);
+  background: var(--bg-surface);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-28);
+}

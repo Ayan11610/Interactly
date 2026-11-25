@@ -5,7 +5,7 @@
 
 import PublicHeader from "@/components/PublicHeader/PublicHeader";
 import PublicFooter from "@/components/PublicFooter/PublicFooter";
-import { RoughFilter } from "./_landing/Doodles";
+import { RoughFilter } from "@/components/Doodles/Doodles";
 import HeroSection from "./_landing/HeroSection";
 import HowItWorksSection from "./_landing/HowItWorksSection";
 import TryItSection from "./_landing/TryItSection";

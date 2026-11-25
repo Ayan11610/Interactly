@@ -1,6 +1,6 @@
-// File: frontend/app/(public)/_landing/SectionHeading.js
-// Purpose: The small mono eyebrow and big title that open each landing page section.
-// Screens: PUB-01
+// File: frontend/components/SectionHeading/SectionHeading.js
+// Purpose: The small mono eyebrow and big title that open each public page section.
+// Screens: PUB-01, PUB-02, PUB-03
 
 import styles from "./SectionHeading.module.css";
 

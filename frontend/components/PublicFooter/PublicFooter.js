@@ -1,9 +1,10 @@
 // File: frontend/components/PublicFooter/PublicFooter.js
 // Purpose: Dark footer of the public site: mascot, credit line, link columns and copyright.
-// Screens: PUB-01 (PUB-02 and PUB-03 use a compact version, added with those pages)
+// Screens: PUB-01 (full), PUB-02 and PUB-03 (compact)
 
 import Link from "next/link";
 import Container from "@/components/Container/Container";
+import CompactFooter from "./CompactFooter";
 import styles from "./PublicFooter.module.css";
 
 // The three link columns shown in the footer
@@ -50,10 +51,15 @@ function FooterMascot() {
 }
 
 // Shows the public footer. screenCode is printed after the copyright (e.g. "PUB-01").
-export default function PublicFooter({ screenCode }) {
+// compact = the one-row footer used by PUB-02 and PUB-03.
+export default function PublicFooter({ screenCode, compact = false }) {
   let copyright = "© 2026 Interactly";
   if (screenCode) {
     copyright = copyright + " · " + screenCode;
+  }
+
+  if (compact) {
+    return <CompactFooter copyright={copyright} />;
   }
 
   return (

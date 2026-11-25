@@ -11,6 +11,7 @@ import Logo from "@/components/Logo/Logo";
 import Button from "@/components/Button/Button";
 import Icon from "@/components/Icon/Icon";
 import Container from "@/components/Container/Container";
+import CompactHeader from "./CompactHeader";
 import styles from "./PublicHeader.module.css";
 
 // Links shown in the desktop navigation
@@ -30,8 +31,13 @@ const mobileLinks = [
 ];
 
 // Shows the public header. On phones the links move into a menu that opens below the bar.
-export default function PublicHeader() {
+// compact = the shorter header used by PUB-02 and PUB-03 (no menu button, links wrap).
+export default function PublicHeader({ compact = false }) {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  if (compact) {
+    return <CompactHeader />;
+  }
 
   // Opens or closes the phone menu
   function toggleMenu() {

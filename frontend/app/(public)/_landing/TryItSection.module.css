@@ -10,6 +10,12 @@
   border-top: var(--bw-default) solid var(--border-strong);
 }
 
+/* Lightning bolt doodle position */
+.bolt {
+  top: 60px;
+  right: 8%;
+}
+
 .inner {
   display: flex;
   flex-direction: column;

@@ -3,7 +3,7 @@
 // Screens: PUB-01
 
 import Container from "@/components/Container/Container";
-import SectionHeading from "./SectionHeading";
+import SectionHeading from "@/components/SectionHeading/SectionHeading";
 import LaptopDrawing from "./LaptopDrawing";
 import PhonesDrawing from "./PhonesDrawing";
 import ProjectorDrawing from "./ProjectorDrawing";

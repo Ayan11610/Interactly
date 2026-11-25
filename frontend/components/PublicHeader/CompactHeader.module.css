@@ -1,0 +1,56 @@
+/*
+  File: frontend/components/PublicHeader/CompactHeader.module.css
+  Purpose: Styles for the compact public header.
+  Source: <header> in docs/design/screens/PUB-02.html and PUB-03.html
+*/
+
+.header {
+  position: relative;
+  z-index: 5;
+  border-bottom: var(--bw-default) solid var(--border-strong);
+  background: var(--bg-page);
+}
+
+.bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-12) var(--space-20);
+  min-height: 72px;
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-12);
+}
+
+.home {
+  display: inline-flex;
+  text-decoration: none;
+  color: var(--text-primary);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8) 22px;
+}
+
+.link {
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: var(--fs-nav);
+  text-decoration: none;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+.login {
+  color: var(--text-primary);
+  font-weight: 600;
+}

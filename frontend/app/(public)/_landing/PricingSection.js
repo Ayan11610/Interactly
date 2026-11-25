@@ -6,7 +6,7 @@
 import Link from "next/link";
 import Container from "@/components/Container/Container";
 import Button from "@/components/Button/Button";
-import SectionHeading from "./SectionHeading";
+import SectionHeading from "@/components/SectionHeading/SectionHeading";
 import styles from "./PricingSection.module.css";
 
 // Plan text copied from the design. Prices are still "[PRICE]" placeholders in the design.

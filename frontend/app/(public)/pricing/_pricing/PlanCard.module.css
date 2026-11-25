@@ -1,0 +1,102 @@
+/*
+  File: frontend/app/(public)/pricing/_pricing/PlanCard.module.css
+  Purpose: Styles for one Pricing page plan card.
+  Source: docs/design/screens/PUB-02.html (plan <article>s)
+*/
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  padding: var(--space-28);
+  border: var(--bw-default) solid var(--border-strong);
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+}
+
+.recommended {
+  border-width: var(--bw-picked);
+  box-shadow: var(--shadow-lifted);
+}
+
+/* Lime "Recommended" label stamped onto the card */
+.stamp {
+  position: absolute;
+  top: -18px;
+  right: var(--space-16);
+  padding: var(--space-4) var(--space-10);
+  border: var(--bw-default) solid var(--border-strong);
+  border-radius: var(--radius-md);
+  background: var(--lime-400);
+  box-shadow: var(--shadow-xs);
+  font-weight: 600;
+  font-size: var(--fs-label);
+  animation: stamp 500ms 300ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.name {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.tagline {
+  color: var(--text-secondary);
+  font-size: var(--fs-body-sm);
+}
+
+.price {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 1.1;
+}
+
+.period {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--fs-body-sm);
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--fs-body-sm);
+  line-height: 1.45;
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-10);
+}
+
+.button {
+  margin-top: auto;
+}
+
+@keyframes stamp {
+  0% {
+    transform: scale(2) rotate(-12deg);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(0.94) rotate(-6deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(-6deg);
+    opacity: 1;
+  }
+}

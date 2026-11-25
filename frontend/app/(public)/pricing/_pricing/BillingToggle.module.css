@@ -1,0 +1,39 @@
+/*
+  File: frontend/app/(public)/pricing/_pricing/BillingToggle.module.css
+  Purpose: Styles for the monthly / yearly switch.
+  Source: docs/design/screens/PUB-02.html ("Billing period" group)
+*/
+
+.toggle {
+  display: inline-flex;
+  align-self: flex-start;
+  overflow: hidden;
+  border: var(--bw-default) solid var(--border-strong);
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+}
+
+.option {
+  height: 44px;
+  padding: 0 var(--space-18);
+  border: 0;
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-weight: 600;
+  font-size: var(--fs-nav);
+  cursor: pointer;
+}
+
+.first {
+  border-right: var(--bw-default) solid var(--border-strong);
+}
+
+.chosen {
+  background: var(--bg-tint);
+}
+
+.saving {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono-xs);
+}

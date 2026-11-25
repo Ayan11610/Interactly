@@ -1,0 +1,68 @@
+/*
+  File: frontend/app/(public)/pricing/_pricing/PlanChooser.module.css
+  Purpose: Styles for the Pricing page intro and the plan card grid.
+  Source: docs/design/screens/PUB-02.html (first two sections)
+*/
+
+.intro {
+  position: relative;
+  padding: clamp(40px, 6vw, 88px) 0 var(--space-24);
+}
+
+/* Where the doodles sit */
+.spiral {
+  top: -60px;
+  right: -80px;
+}
+
+.star {
+  top: 160px;
+  left: 4%;
+}
+
+.introInner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-18);
+}
+
+.screenCode {
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono-xs);
+}
+
+/* Fluid size from the design: 36px on phones up to 72px on desktop */
+.title {
+  max-width: 820px;
+  margin: 0;
+  font-size: clamp(2.25rem, 1.5rem + 3vw, 4.5rem);
+  line-height: 1.05;
+}
+
+.lead {
+  max-width: 640px;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.handNote {
+  align-self: flex-start;
+  margin: 0;
+  font-family: var(--font-hand);
+  font-size: var(--fs-hand-sm);
+  transform: rotate(-2deg);
+}
+
+.plans {
+  padding: clamp(48px, 6vw, 96px) 0;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: var(--space-28);
+  padding-top: var(--space-14);
+}

@@ -1,7 +1,8 @@
 /*
-  File: frontend/app/(public)/_landing/Doodles.module.css
-  Purpose: Position, colour and wiggle animation of the landing page doodles.
-  Source: docs/design/screens/PUB-01.html (hero and "Try it here" doodles)
+  File: frontend/components/Doodles/Doodles.module.css
+  Purpose: Colour, rough edge and wiggle animation of the public page doodles.
+           Each page places the doodles with its own position class.
+  Source: docs/design/screens/PUB-01.html and PUB-02.html (doodles)
 */
 
 .filterHolder {
@@ -21,16 +22,12 @@
 
 .spiral {
   position: absolute;
-  top: -70px;
-  right: -80px;
   filter: url(#rough);
   animation: wiggle 3s ease-in-out infinite;
 }
 
 .star {
   position: absolute;
-  bottom: var(--space-40);
-  left: 3%;
   filter: url(#rough);
   animation: wiggle 3.4s ease-in-out infinite;
 }
@@ -45,8 +42,6 @@
 
 .bolt {
   position: absolute;
-  top: 60px;
-  right: 8%;
   filter: url(#rough);
 }
 

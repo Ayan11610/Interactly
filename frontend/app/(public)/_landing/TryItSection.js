@@ -6,8 +6,8 @@
 
 import { useState } from "react";
 import Container from "@/components/Container/Container";
-import SectionHeading from "./SectionHeading";
-import { BoltDoodle } from "./Doodles";
+import SectionHeading from "@/components/SectionHeading/SectionHeading";
+import { BoltDoodle } from "@/components/Doodles/Doodles";
 import TryQuiz from "./TryQuiz";
 import TryPoll from "./TryPoll";
 import TryWordCloud from "./TryWordCloud";
@@ -37,7 +37,7 @@ export default function TryItSection() {
 
   return (
     <section className={styles.section} aria-labelledby="play-heading">
-      <BoltDoodle />
+      <BoltDoodle className={styles.bolt} />
       <Container className={styles.inner}>
         <SectionHeading id="play-heading" eyebrow="TRY IT HERE" title="Pick an activity and answer it" />
 

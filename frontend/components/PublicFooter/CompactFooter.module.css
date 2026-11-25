@@ -1,0 +1,48 @@
+/*
+  File: frontend/components/PublicFooter/CompactFooter.module.css
+  Purpose: Styles for the compact public footer.
+  Source: <footer> in docs/design/screens/PUB-02.html and PUB-03.html
+*/
+
+.footer {
+  padding: var(--space-40) 0 var(--space-28);
+  border-top: var(--bw-default) solid var(--border-strong);
+  background: var(--surface-ink);
+  color: var(--neutral-50);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-24);
+  font-size: var(--fs-body-sm);
+}
+
+.name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--fs-card-title);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-18);
+}
+
+/* Links stay light on hover, as in the design (overrides the global ink a:hover colour) */
+.link,
+.link:hover {
+  color: var(--neutral-50);
+}
+
+.link:focus-visible {
+  outline-color: var(--action-primary);
+}
+
+.copyright {
+  color: var(--text-on-ink-muted);
+  font-size: var(--fs-label);
+}

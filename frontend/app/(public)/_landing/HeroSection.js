@@ -12,7 +12,7 @@ import Container from "@/components/Container/Container";
 import JoinCodeForm, { demoCode } from "./JoinCodeForm";
 import DemoPoll from "./DemoPoll";
 import DemoQuiz from "./DemoQuiz";
-import { SpiralDoodle, StarDoodle } from "./Doodles";
+import { SpiralDoodle, StarDoodle } from "@/components/Doodles/Doodles";
 import styles from "./HeroSection.module.css";
 
 // Shows the hero. The code typed in the join box decides whether the poll or the quiz shows.
@@ -28,8 +28,8 @@ export default function HeroSection() {
 
   return (
     <section className={styles.hero}>
-      <SpiralDoodle />
-      <StarDoodle />
+      <SpiralDoodle className={styles.spiral} />
+      <StarDoodle className={styles.star} />
       <Container className={styles.inner}>
         <div className={styles.intro}>
           <span className={styles.badge}>

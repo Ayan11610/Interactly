@@ -9,7 +9,7 @@
 import { useState } from "react";
 import Container from "@/components/Container/Container";
 import Button from "@/components/Button/Button";
-import SectionHeading from "./SectionHeading";
+import SectionHeading from "@/components/SectionHeading/SectionHeading";
 import styles from "./AiSection.module.css";
 
 const studentAnswers = [
