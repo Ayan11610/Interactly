@@ -4,10 +4,14 @@
 
 const express = require("express");
 const getHealth = require("../../controllers/health/getHealth");
+const getDatabaseHealth = require("../../controllers/health/getDatabaseHealth");
 
 const router = express.Router();
 
 // GET /api/health
 router.get("/", getHealth);
+
+// GET /api/health/db
+router.get("/db", getDatabaseHealth);
 
 module.exports = router;
