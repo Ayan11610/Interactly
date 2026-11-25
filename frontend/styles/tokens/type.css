@@ -1,0 +1,101 @@
+/*
+  File: frontend/styles/tokens/type.css
+  Purpose: Font families and text styles (size, line height, weight).
+  Source: docs/design/system/tokens.json
+*/
+
+:root {
+  --font-display: 'Bricolage Grotesque', sans-serif;
+  --font-sans: 'Instrument Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --font-hand: 'Patrick Hand', cursive;
+
+  /* Display (display) */
+  --fs-display-hero: 72px;
+  --lh-display-hero: 1.05;
+  --fw-display-hero: 700;
+  --fs-display-xl: 56px;
+  --lh-display-xl: 1.1;
+  --fw-display-xl: 700;
+  --fs-timer-numeral: 112px;
+  --lh-timer-numeral: 1;
+  --fw-timer-numeral: 700;
+  --fs-page-title: 36px;
+  --lh-page-title: 1.2;
+  --fw-page-title: 700;
+  --fs-feedback-title: 32px;
+  --lh-feedback-title: 1.15;
+  --fw-feedback-title: 700;
+  --fs-stat-value: 30px;
+  --lh-stat-value: 1.1;
+  --fw-stat-value: 700;
+  --fs-projector-title: 28px;
+  --lh-projector-title: 1.2;
+  --fw-projector-title: 700;
+  --fs-section-title: 26px;
+  --lh-section-title: 1.2;
+  --fw-section-title: 700;
+  --fs-card-title: 22px;
+  --lh-card-title: 1.2;
+  --fw-card-title: 700;
+  --fs-heading: 20px;
+  --lh-heading: 1.2;
+  --fw-heading: 700;
+  --fs-subheading: 17px;
+  --lh-subheading: 1.2;
+  --fw-subheading: 700;
+
+  /* Text (sans) */
+  --fs-answer-label: 19px;
+  --lh-answer-label: 1.25;
+  --fw-answer-label: 600;
+  --fs-body-lg: 17px;
+  --lh-body-lg: 1.6;
+  --fw-body-lg: 400;
+  --fs-body: 16px;
+  --lh-body: 1.6;
+  --fw-body: 400;
+  --fs-body-strong: 16px;
+  --lh-body-strong: 1.3;
+  --fw-body-strong: 600;
+  --fs-body-sm: 15px;
+  --lh-body-sm: 1.5;
+  --fw-body-sm: 400;
+  --fs-nav: 15px;
+  --lh-nav: 1.2;
+  --fw-nav: 600;
+  --fs-label: 14px;
+  --lh-label: 1.4;
+  --fw-label: 600;
+  --fs-caption: 14px;
+  --lh-caption: 1.5;
+  --fw-caption: 400;
+  --fs-micro: 12px;
+  --lh-micro: 1.2;
+  --fw-micro: 600;
+
+  /* Mono (mono) */
+  --fs-mono-score: 26px;
+  --lh-mono-score: 1.1;
+  --fw-mono-score: 500;
+  --fs-mono-lg: 18px;
+  --lh-mono-lg: 1.2;
+  --fw-mono-lg: 500;
+  --fs-mono-md: 14px;
+  --lh-mono-md: 1.3;
+  --fw-mono-md: 500;
+  --fs-mono-sm: 13px;
+  --lh-mono-sm: 1.3;
+  --fw-mono-sm: 500;
+  --fs-mono-xs: 12px;
+  --lh-mono-xs: 1.3;
+  --fw-mono-xs: 500;
+
+  /* Handwritten (hand) */
+  --fs-hand: 23px;
+  --lh-hand: 1.3;
+  --fw-hand: 400;
+  --fs-hand-sm: 22px;
+  --lh-hand-sm: 1.3;
+  --fw-hand-sm: 400;
+}

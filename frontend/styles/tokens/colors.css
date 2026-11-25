@@ -1,0 +1,62 @@
+/*
+  File: frontend/styles/tokens/colors.css
+  Purpose: Semantic colour tokens for the light theme (the default).
+  Source: docs/design/system/tokens.json
+*/
+
+:root {
+  --bg-page: #FFFBF3;
+  --bg-surface: #FFFFFF;
+  --bg-raised: #FFFFFF;
+  --bg-sunken: #F5F3EA;
+  --bg-tint: #FFF1B8;
+  --tint-peach: #FFE1CC;
+  --tint-mint: #D4F7E4;
+  --tint-lime: #E8F9C8;
+  --on-tint-lemon: #1E2420;
+  --on-tint-peach: #1E2420;
+  --on-tint-mint: #1E2420;
+  --text-primary: #1E2420;
+  --text-secondary: #4A524D;
+  --text-placeholder: #5F6B64;
+  --text-on-light: #1E2420;
+  --text-on-dark: #FFFFFF;
+  --border-strong: #1E2420;
+  --border-subtle: #CFD1C8;
+  --border-hairline: #E8E6DC;
+  --action-primary: #FFD93D;
+  --action-primary-hover: #F2C318;
+  --on-action: #1E2420;
+  --accent-pine: #1F5E45;
+  --link: #1F5E45;
+  --status-success: #22B573;
+  --success-text: #157A4C;
+  --status-error: #F05D4E;
+  --error-text: #B83A2E;
+  --status-warning: #FFD93D;
+  --warning-text: #8C6A00;
+  --focus-ring: #1E2420;
+  --shadow-ink: #1E2420;
+  --surface-ink: #1E2420;
+  --text-on-ink: #FFFBF3;
+  --text-on-ink-body: #E8E6DC;
+  --text-on-ink-muted: #A9B5AE;
+  --border-on-ink: #3A4640;
+  --scrim: rgba(30, 36, 32, .45);
+  --activity-quiz: #FFA978;
+  --activity-quiz-tint: #FFE1CC;
+  --activity-poll: #4FD99A;
+  --activity-poll-tint: #D4F7E4;
+  --activity-rating: #FFD93D;
+  --activity-rating-tint: #FFF1B8;
+  --activity-wordcloud: #A8E85A;
+  --activity-wordcloud-tint: #E8F9C8;
+  --activity-qa: #1F5E45;
+  --activity-qa-tint: #EDFCF4;
+  --activity-open: #FFFFFF;
+  --activity-open-tint: #F5F3EA;
+  --answer-a: #FFD93D;
+  --answer-b: #FFA978;
+  --answer-c: #4FD99A;
+  --answer-d: #1F5E45;
+}

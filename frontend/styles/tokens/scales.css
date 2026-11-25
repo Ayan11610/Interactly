@@ -1,0 +1,65 @@
+/*
+  File: frontend/styles/tokens/scales.css
+  Purpose: Colour scale steps. Use only for charts and illustration, not product UI.
+  Source: docs/design/system/tokens.json
+*/
+
+:root {
+  --lemon-50: #FFFBE6;
+  --lemon-100: #FFF1B8;
+  --lemon-200: #FFE88A;
+  --lemon-300: #FFE15E;
+  --lemon-400: #FFD93D;
+  --lemon-500: #F2C318;
+  --lemon-600: #C99E0A;
+  --lemon-700: #8C6A00;
+  --lemon-800: #6B5304;
+  --lemon-900: #3D2F02;
+
+  --peach-50: #FFF5EE;
+  --peach-100: #FFE1CC;
+  --peach-200: #FFCBAA;
+  --peach-300: #FFB98F;
+  --peach-400: #FFA978;
+  --peach-500: #F48A52;
+  --peach-600: #D06A33;
+  --peach-700: #A04E22;
+  --peach-800: #6E3516;
+  --peach-900: #3E1E0C;
+
+  --mint-50: #EDFCF4;
+  --mint-100: #D4F7E4;
+  --mint-200: #A9EFCB;
+  --mint-300: #7EE6B2;
+  --mint-400: #4FD99A;
+  --mint-500: #2DC283;
+  --mint-600: #1F9C69;
+  --mint-700: #1A7A52;
+  --mint-800: #1F5E45;
+  --mint-900: #0F3526;
+
+  --lime-50: #F6FDE9;
+  --lime-100: #E8F9C8;
+  --lime-200: #D2F2A0;
+  --lime-300: #BDED7C;
+  --lime-400: #A8E85A;
+  --lime-500: #8ACF3A;
+  --lime-600: #6BA82A;
+  --lime-700: #507E20;
+  --lime-800: #365616;
+  --lime-900: #1E300C;
+
+  --neutral-0: #FFFFFF;
+  --neutral-25: #FFFBF3;
+  --neutral-50: #F5F3EA;
+  --neutral-100: #E8E6DC;
+  --neutral-200: #CFD1C8;
+  --neutral-300: #A9B5AE;
+  --neutral-400: #85918A;
+  --neutral-500: #5F6B64;
+  --neutral-600: #4A524D;
+  --neutral-700: #3A4640;
+  --neutral-800: #28322D;
+  --neutral-900: #1E2420;
+  --neutral-950: #141A17;
+}

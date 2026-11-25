@@ -1,0 +1,37 @@
+/*
+  File: frontend/styles/tokens/colors-dark.css
+  Purpose: Colour and shadow tokens that change in the "Dark and projector" theme.
+  Source: docs/design/system/tokens.json
+*/
+
+[data-theme="dark"] {
+  --bg-page: #141A17;
+  --bg-surface: #1E2622;
+  --bg-raised: #28322D;
+  --bg-sunken: #141A17;
+  --bg-tint: #3A3416;
+  --tint-peach: #40291D;
+  --tint-mint: #173A2A;
+  --on-tint-lemon: #FFE680;
+  --on-tint-peach: #FFC4A0;
+  --on-tint-mint: #8DF0C0;
+  --text-primary: #F5F3EA;
+  --text-secondary: #A9B5AE;
+  --text-placeholder: #85918A;
+  --border-strong: #85918A;
+  --border-subtle: #28322D;
+  --border-hairline: #28322D;
+  --link: #8DF0C0;
+  --status-success: #34D186;
+  --success-text: #34D186;
+  --status-error: #FF6B5C;
+  --error-text: #FF6B5C;
+  --warning-text: #FFE680;
+  --focus-ring: #FFD93D;
+  --shadow-ink: #0A0D0B;
+  --shadow-xs: 2px 2px 0 #0A0D0B;
+  --shadow-sm: 3px 3px 0 #0A0D0B;
+  --shadow-md: 4px 4px 0 #0A0D0B;
+  --shadow-lifted: 5px 7px 0 #0A0D0B;
+  --shadow-sheet: 0 -4px 0 #0A0D0B;
+}

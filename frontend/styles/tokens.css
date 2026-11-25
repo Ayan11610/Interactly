@@ -1,0 +1,13 @@
+/*
+  File: frontend/styles/tokens.css
+  Purpose: Loads every Interactly design token as a CSS variable.
+           The tokens are split into small files in styles/tokens/.
+  Source: docs/design/system/tokens.json
+  Themes: light is the default; set data-theme="dark" on <html> for "Dark and projector".
+*/
+
+@import "./tokens/colors.css";
+@import "./tokens/colors-dark.css";
+@import "./tokens/scales.css";
+@import "./tokens/type.css";
+@import "./tokens/layout.css";
