@@ -33,7 +33,7 @@ const plans = [
     name: "Team",
     price: "PKR [PRICE]",
     perMonth: true,
-    text: "Everything in Pro, plus a shared library, department reports and admin controls.",
+    text: "Everything in Pro, plus a shared library, department reports and student tracking across classes.",
     cta: "Talk to us",
     href: "/pricing",
     recommended: false,

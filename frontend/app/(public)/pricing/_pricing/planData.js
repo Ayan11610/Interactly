@@ -47,7 +47,7 @@ export const plans = [
       "Up to 1,000 people per session",
       "Shared activity library",
       "Department reports",
-      "Admin controls and roles",
+      "Cross-session engagement and student tracking across classes",
     ],
     cta: "Talk to us",
     href: "/signup",
@@ -64,5 +64,5 @@ export const compareRows = [
   { feature: "Session reports", free: "Last 3", pro: "All", team: "All" },
   { feature: "Export to PDF, CSV, Excel", free: false, pro: true, team: true },
   { feature: "Shared library", free: false, pro: false, team: true },
-  { feature: "Admin controls", free: false, pro: false, team: true },
+  { feature: "Cross-session engagement tracking", free: false, pro: false, team: true },
 ];
