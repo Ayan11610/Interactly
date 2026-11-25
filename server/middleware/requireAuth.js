@@ -1,6 +1,6 @@
 // File: server/middleware/requireAuth.js
 // Purpose: Lets a request through only if it carries a valid Supabase login token
-//          ("Authorization: Bearer <token>"). Adds req.user = { id, email } for later steps.
+//          ("Authorization: Bearer <token>"). Adds req.user for later steps.
 // Diagram: sequence 5.5.2 (Login and Authentication)
 
 const supabase = require("../config/supabase");
@@ -30,7 +30,14 @@ async function requireAuth(req, res, next) {
       return next(makeError(401, "Your session has expired. Please log in again"));
     }
 
-    req.user = { id: data.user.id, email: data.user.email };
+    // signUpData holds what the user typed at sign-up (name, chosen role); it is only used
+    // once, to create the profile. After that the role is always read from the profiles table.
+    req.user = {
+      id: data.user.id,
+      email: data.user.email,
+      isAnonymous: data.user.is_anonymous === true,
+      signUpData: data.user.user_metadata || {},
+    };
     next();
   } catch (err) {
     next(err);
