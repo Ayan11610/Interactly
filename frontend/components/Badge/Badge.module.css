@@ -1,0 +1,82 @@
+/*
+  File: frontend/components/Badge/Badge.module.css
+  Purpose: Styles for the Badge component and its tones.
+  Source: docs/design/system/components.css (.ix-badge, .ix-dot)
+*/
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-6);
+  padding: var(--space-2) var(--space-10);
+  border: var(--bw-default) solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  font-size: var(--fs-label);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.small {
+  padding: 1px var(--space-8);
+}
+
+/* Tones (white is the base above) */
+.lemon {
+  background: var(--bg-tint);
+  color: var(--on-tint-lemon);
+}
+
+.peach {
+  background: var(--tint-peach);
+  color: var(--on-tint-peach);
+}
+
+.mint {
+  background: var(--tint-mint);
+  color: var(--on-tint-mint);
+}
+
+.lime {
+  background: var(--tint-lime);
+  color: var(--text-on-light);
+}
+
+.cream {
+  background: var(--bg-page);
+}
+
+.ink {
+  background: var(--surface-ink);
+  color: var(--action-primary);
+  border-color: var(--surface-ink);
+}
+
+/* Live dot that pulses while a session is running */
+.dot {
+  width: 8px;
+  height: 8px;
+  border: var(--bw-default) solid var(--border-strong);
+  border-radius: var(--radius-full);
+  background: var(--status-success);
+  animation: pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.7);
+    opacity: 0.35;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dot {
+    animation: none;
+  }
+}

@@ -1,0 +1,12 @@
+/*
+  File: frontend/components/Container/Container.module.css
+  Purpose: Styles for the Container component.
+  Source: ".wrap" in docs/design/screens/PUB-01.html
+*/
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 clamp(var(--space-16), 4vw, var(--space-64));
+}

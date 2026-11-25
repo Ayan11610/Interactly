@@ -1,0 +1,48 @@
+/*
+  File: frontend/components/Logo/Logo.module.css
+  Purpose: Styles for the Logo component.
+  Source: docs/design/system/components.css (.ix-brand) and PUB-01 header
+*/
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-10);
+  color: var(--text-primary);
+}
+
+.word {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--fs-card-title);
+}
+
+.face {
+  fill: var(--action-primary);
+}
+
+.outline {
+  fill: none;
+  stroke: var(--text-primary);
+  stroke-width: 6;
+}
+
+.eye {
+  fill: var(--text-on-light);
+}
+
+.smile {
+  fill: none;
+  stroke: var(--text-on-light);
+  stroke-width: 6;
+  stroke-linecap: round;
+}
+
+/* Light outline and text when the logo sits on an ink panel */
+.onDark {
+  color: var(--neutral-50);
+}
+
+.onDark .outline {
+  stroke: var(--neutral-50);
+}

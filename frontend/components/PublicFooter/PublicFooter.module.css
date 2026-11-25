@@ -1,0 +1,110 @@
+/*
+  File: frontend/components/PublicFooter/PublicFooter.module.css
+  Purpose: Styles for the public site footer.
+  Source: <footer> in docs/design/screens/PUB-01.html
+*/
+
+.footer {
+  padding: var(--space-56) 0 var(--space-32);
+  border-top: var(--bw-default) solid var(--border-strong);
+  background: var(--surface-ink);
+  color: var(--neutral-50);
+}
+
+.top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--space-40);
+}
+
+.brand {
+  flex: 1 1 280px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--fs-section-title);
+}
+
+.credit {
+  max-width: 300px;
+  color: var(--text-on-ink-muted);
+  font-size: var(--fs-body-sm);
+  line-height: 1.5;
+}
+
+.columns {
+  flex: 2 1 420px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: var(--space-24);
+  font-size: var(--fs-body-sm);
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+}
+
+.columnTitle {
+  font-weight: 600;
+}
+
+.link {
+  color: var(--neutral-50);
+}
+
+/* Keep the light colour on hover (the global a:hover ink colour would vanish here) */
+.link:hover {
+  color: var(--neutral-50);
+}
+
+.link:focus-visible {
+  outline-color: var(--action-primary);
+}
+
+.bottom {
+  margin-top: var(--space-40);
+  padding-top: var(--space-20);
+  border-top: var(--bw-default) solid var(--border-on-ink);
+  color: var(--text-on-ink-muted);
+  font-size: var(--fs-label);
+}
+
+/* Mascot parts */
+.antenna {
+  fill: none;
+  stroke: var(--neutral-50);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.face {
+  fill: var(--action-primary);
+  stroke: var(--neutral-50);
+  stroke-width: 3;
+}
+
+.eyeWhite {
+  fill: var(--neutral-0);
+  stroke: var(--text-on-light);
+  stroke-width: 2;
+}
+
+.pupil {
+  fill: var(--text-on-light);
+}
+
+.smile {
+  fill: none;
+  stroke: var(--text-on-light);
+  stroke-width: 3;
+  stroke-linecap: round;
+}

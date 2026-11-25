@@ -1,0 +1,108 @@
+/*
+  File: frontend/components/Button/Button.module.css
+  Purpose: Styles for the Button component (variants, sizes and press effect).
+  Source: docs/design/system/components.css (.ix-btn, .ix-press)
+*/
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-8);
+  height: 36px;
+  padding: 0 var(--space-18);
+  border: var(--bw-default) solid var(--border-strong);
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-sm);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--fs-label);
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: transform 150ms cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 150ms;
+}
+
+.button:hover {
+  color: var(--text-primary);
+}
+
+/* Press effect: the button moves into its shadow */
+.button:active {
+  transform: translate(3px, 3px);
+  box-shadow: var(--shadow-none);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button:hover {
+    transform: translate(-1px, -1px);
+  }
+}
+
+/* Sizes (sm is the base above) */
+.sm {
+  height: 36px;
+}
+
+.md {
+  height: 44px;
+  font-size: var(--fs-body);
+}
+
+.lg {
+  height: 52px;
+  font-size: var(--fs-body);
+}
+
+.block {
+  width: 100%;
+}
+
+/* Variants (secondary is the base above) */
+.primary {
+  background: var(--action-primary);
+  color: var(--on-action);
+}
+
+.primary:hover {
+  background: var(--action-primary-hover);
+  color: var(--on-action);
+}
+
+.ghost {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.on-ink {
+  background: var(--action-primary);
+  color: var(--on-action);
+  border-color: var(--neutral-950);
+  box-shadow: var(--shadow-on-ink);
+}
+
+.danger {
+  background: var(--status-error);
+  color: var(--text-on-light);
+}
+
+.button:disabled,
+.button[aria-disabled="true"] {
+  background: var(--bg-sunken);
+  color: var(--text-secondary);
+  border: var(--bw-default) dashed var(--neutral-400);
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+}
