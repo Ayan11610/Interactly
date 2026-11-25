@@ -1,0 +1,28 @@
+/*
+  File: frontend/app/(public)/(landing)/_landing/ProjectorDrawing.module.css
+  Purpose: Styles for the projector drawing (step 03).
+  Source: docs/design/screens/PUB-01.html ("How it works" cards)
+*/
+
+.projectorFrame {
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-18);
+}
+
+.projector {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-8);
+  padding: var(--space-12);
+  border: var(--bw-default) solid var(--border-strong);
+  border-radius: var(--radius-md);
+  background: var(--neutral-950);
+}
+
+.bar {
+  flex: 1;
+  border: var(--bw-hairline) solid var(--neutral-950);
+}

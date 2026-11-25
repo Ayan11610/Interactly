@@ -1,0 +1,11 @@
+/*
+  File: frontend/app/(public)/(landing)/_landing/TryQuiz.module.css
+  Purpose: Tile grid for the "Try it here" quiz demo.
+  Source: docs/design/screens/PUB-01.html (quiz tab)
+*/
+
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-12);
+}

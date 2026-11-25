@@ -1,0 +1,85 @@
+/*
+  File: frontend/app/(public)/(landing)/_landing/JoinCodeForm.module.css
+  Purpose: Styles for the hero join-code box.
+  Source: docs/design/screens/PUB-01.html (hero form)
+*/
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+  max-width: 520px;
+  margin-top: var(--space-12);
+}
+
+.label {
+  font-weight: 600;
+  font-size: var(--fs-body-sm);
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+.input {
+  width: 100%;
+  min-width: 0;
+  height: 64px;
+  padding: 0 var(--space-18);
+  border: var(--bw-selected) solid var(--border-strong);
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+  box-shadow: var(--shadow-sm);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: clamp(24px, 4vw, 34px);
+  letter-spacing: 0.25em;
+}
+
+.shakeOne {
+  animation: shakeOne 420ms;
+}
+
+.shakeTwo {
+  animation: shakeTwo 420ms;
+}
+
+.hint {
+  min-height: 20px;
+  color: var(--text-secondary);
+  font-size: var(--fs-label);
+}
+
+.hintError {
+  color: var(--error-text);
+}
+
+@keyframes shakeOne {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20%,
+  60% {
+    transform: translateX(-5px);
+  }
+  40%,
+  80% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes shakeTwo {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20%,
+  60% {
+    transform: translateX(-5px);
+  }
+  40%,
+  80% {
+    transform: translateX(5px);
+  }
+}

@@ -1,0 +1,41 @@
+/*
+  File: frontend/app/(public)/(landing)/_landing/DrawingFrame.module.css
+  Purpose: Shared frame, background tints and answer colours for the "How it works" drawings.
+  Source: docs/design/screens/PUB-01.html ("How it works" cards)
+*/
+
+.frame {
+  aspect-ratio: 4 / 3;
+  display: flex;
+  border: var(--bw-default) solid var(--border-strong);
+  border-radius: var(--radius-md);
+}
+
+.lemonBg {
+  background: var(--bg-tint);
+}
+
+.peachBg {
+  background: var(--tint-peach);
+}
+
+.mintBg {
+  background: var(--tint-mint);
+}
+
+/* The four answer colours used inside the drawings */
+.colourA {
+  background: var(--answer-a);
+}
+
+.colourB {
+  background: var(--answer-b);
+}
+
+.colourC {
+  background: var(--answer-c);
+}
+
+.colourD {
+  background: var(--answer-d);
+}

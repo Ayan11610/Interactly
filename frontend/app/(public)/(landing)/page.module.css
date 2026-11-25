@@ -1,0 +1,14 @@
+/*
+  File: frontend/app/(public)/(landing)/page.module.css
+  Purpose: Page wrapper for the landing page.
+  Source: docs/design/screens/PUB-01.html (outer wrapper)
+*/
+
+/* Clips the doodles that stick out past the right edge, so phones never scroll sideways */
+.page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: var(--bg-page);
+  color: var(--text-primary);
+}

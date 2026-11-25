@@ -1,0 +1,48 @@
+/*
+  File: frontend/app/(public)/(landing)/_landing/TryPoll.module.css
+  Purpose: Styles for the "Try it here" poll demo.
+  Source: docs/design/screens/PUB-01.html (poll tab)
+*/
+
+.list {
+  gap: var(--space-14);
+}
+
+.option {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  min-height: 50px;
+  padding: 0 var(--space-14);
+  overflow: hidden;
+  border: var(--bw-default) solid var(--border-strong);
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: var(--fs-body);
+  font-weight: 600;
+  text-align: left;
+}
+
+.bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  border-right: var(--bw-default) solid var(--border-strong);
+  background: var(--tint-mint);
+  transition: width 600ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.label {
+  position: relative;
+  flex: 1;
+}
+
+.percent {
+  position: relative;
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono-md);
+}

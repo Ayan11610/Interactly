@@ -1,0 +1,144 @@
+/*
+  File: frontend/app/(public)/(landing)/_landing/AiSection.module.css
+  Purpose: Styles for the "After class" AI section.
+  Source: docs/design/screens/PUB-01.html (section "ai-h")
+*/
+
+.section {
+  padding: clamp(56px, 7vw, 112px) 0;
+  border-top: var(--bw-default) solid var(--border-strong);
+  background: var(--bg-tint);
+}
+
+.inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-48);
+}
+
+.text {
+  flex: 1 1 360px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.lead {
+  margin: 0;
+  max-width: 520px;
+  font-size: var(--fs-body-lg);
+  line-height: 1.6;
+}
+
+.toggle {
+  align-self: flex-start;
+}
+
+.board {
+  position: relative;
+  flex: 1 1 380px;
+  min-width: 0;
+  min-height: 340px;
+}
+
+.answer {
+  position: absolute;
+  width: 78%;
+  padding: var(--space-14) var(--space-16);
+  border: var(--bw-default) solid var(--border-strong);
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+  box-shadow: var(--shadow-sm);
+  font-size: var(--fs-body-sm);
+  line-height: 1.45;
+  transition: all 600ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.answerLabel {
+  display: block;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono-xs);
+}
+
+/* Lemon card with the AI suggestion, shown over the stacked answers */
+.suggestion {
+  position: absolute;
+  top: 70px;
+  left: 4%;
+  right: 4%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+  padding: 22px;
+  border: var(--bw-default) solid var(--border-strong);
+  border-radius: var(--radius-md);
+  background: var(--action-primary);
+  box-shadow: var(--shadow-md);
+  animation: zoomIn 450ms 250ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+.bulb {
+  position: absolute;
+  top: -26px;
+  right: var(--space-18);
+}
+
+.bulb path {
+  fill: var(--bg-surface);
+  stroke: var(--border-strong);
+  stroke-width: 5;
+  stroke-linejoin: round;
+}
+
+.suggestionTitle {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--fs-card-title);
+  line-height: 1.25;
+}
+
+.suggestionText {
+  font-size: var(--fs-body-sm);
+  line-height: 1.5;
+}
+
+.suggestionActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-10);
+}
+
+.useChip,
+.dismiss {
+  display: inline-flex;
+  align-items: center;
+  height: 36px;
+  font-weight: 600;
+  font-size: var(--fs-label);
+}
+
+.useChip {
+  padding: 0 var(--space-12);
+  border: var(--bw-default) solid var(--border-strong);
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+}
+
+.dismiss {
+  padding: 0 var(--space-8);
+  text-decoration: underline;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
